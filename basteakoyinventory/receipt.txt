@@ -1,0 +1,4 @@
+Payment Method: cash
+Amount Paid: 200
+Grand Total: 90
+Change: 110

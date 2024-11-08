@@ -1,0 +1,181 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'General Sans', sans-serif;
+    background-color: #F0F0F0;
+    overflow: hidden;
+}
+
+/* General background styles */
+body {
+    margin: 0;
+    font-family: 'General Sans', sans-serif;
+}
+
+.dashboard-container {
+    display: flex;
+    height: 100vh;
+    overflow: hidden; /* Prevent page scrolling */
+}
+
+/* Sidebar */
+.sidebar {
+    background-color: #1E1E1E;
+    color: #FFD357;
+    width: 350px;
+    height: 100%;
+    padding: 20px;
+    position: fixed; /* Sidebar is now fixed */
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.sidebar .logo {
+    text-align: center;
+}
+
+.sidebar .logo img {
+    width: 150px;
+}
+
+.sidebar h2, .sidebar p {
+    margin: 16px 8px;
+    font-weight: bold;
+}
+
+.sidebar nav ul {
+    list-style: none;
+    padding-bottom: 16px;
+}
+
+.sidebar nav ul li {
+    margin: 24px 0;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.sidebar nav ul li a {
+    text-decoration: none;
+    color: #FFC300;
+    font-weight: 500;
+    display: block;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.sidebar nav ul li:hover {
+    background-color: #FFD357;
+}
+
+.sidebar nav ul li:hover a {
+    color: #1E1E1E;
+}
+
+.sidebar .logout {
+    text-align: center;
+}
+
+.sidebar .logout a {
+    color: #D25858;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Header */
+.dashboard-header {
+    background-color: #D25858;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    position: fixed; /* Header is fixed */
+    width: calc(100% - 350px); /* Account for sidebar width */
+    top: 0;
+    left: 350px; /* Align to the right of the sidebar */
+    z-index: 2;
+    margin-bottom: 24px;
+}
+
+.main-content {
+    margin-left: 350px;
+    padding: 20px;
+    padding-top: 80px;
+    width: calc(100% - 350px);
+}
+
+/* Sales Report Section */
+.sales-report h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    margin-top: 24px;
+}
+
+.report-buttons {
+    margin-bottom: 20px;
+}
+
+.report-btn {
+    background-color: #000;
+    color: #FFD357;
+    border: none;
+    padding: 10px 20px;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    transition: opacity 0.3s ease;
+    border-radius: 4px;
+    font-weight: bold;
+    
+}
+
+.report-btn.active {
+    opacity: 1; /* Fully visible */
+}
+
+.report-btn.inactive {
+    opacity: 0.75; /* Reduce visibility */
+}
+
+.report-btn:hover {
+    background-color: #FFD357;
+    color: #000;
+}
+
+.sales-summary {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.sales-box {
+    background-color: #FFD357;
+    padding: 20px;
+    border-radius: 10px;
+    width: 30%;
+    text-align: center;
+}
+
+.history-sales {
+    margin-bottom: 48px;
+}
+
+#salesTable {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#salesTable th, #salesTable td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+#salesTable th {
+    background-color: #f2f2f2;
+}
