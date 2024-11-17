@@ -1,0 +1,253 @@
+/* General background styles */
+body {
+    font-family: 'General Sans', sans-serif;
+    background-color: #F0F0F0;
+    overflow: hidden;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'General Sans', sans-serif;
+    background-color: #F0F0F0;
+    overflow: hidden;
+}
+
+/* General background styles */
+body {
+    margin: 0;
+    font-family: 'General Sans', sans-serif;
+}
+
+.dashboard-container {
+    display: flex;
+    height: 100vh;
+    overflow: hidden; /* Prevent page scrolling */
+}
+
+/* Sidebar */
+.sidebar {
+    background-color: #1E1E1E;
+    color: #FFD357;
+    width: 350px;
+    height: 100%;
+    padding: 20px;
+    position: fixed; /* Sidebar is now fixed */
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.sidebar .logo {
+    text-align: center;
+}
+
+.sidebar .logo img {
+    width: 150px;
+}
+
+.sidebar h2, .sidebar p {
+    margin: 16px 8px;
+    font-weight: bold;
+}
+
+.sidebar nav ul {
+    list-style: none;
+    padding-bottom: 16px;
+}
+
+.sidebar nav ul li {
+    margin: 24px 0;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.sidebar nav ul li a {
+    text-decoration: none;
+    color: #FFC300;
+    font-weight: 500;
+    display: block;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.sidebar nav ul li:hover {
+    background-color: #FFD357;
+}
+
+.sidebar nav ul li:hover a {
+    color: #1E1E1E;
+}
+
+.sidebar .logout {
+    text-align: center;
+}
+
+.sidebar .logout a {
+    color: #D25858;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Header */
+.dashboard-header {
+    background-color: #D25858;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    position: fixed; /* Header is fixed */
+    width: calc(100% - 350px); /* Account for sidebar width */
+    top: 0;
+    left: 350px; /* Align to the right of the sidebar */
+    z-index: 2;
+    margin-bottom: 24px;
+}
+
+.main-content {
+    margin-left: 350px;
+    padding: 20px;
+    padding-top: 80px;
+    width: calc(100% - 350px);
+}
+
+/* Table Styling */
+table {
+    width: 90%; /* Reduced width of the table */
+    margin: 0 auto 20px auto; /* Centered table */
+    border-collapse: collapse;
+}
+
+table th, table td {
+    border: 1px solid #ddd;
+    padding: 8px; /* Reduced padding */
+    text-align: left;
+}
+
+table th {
+    background-color: #FFD357;
+    color: #1E1E1E;
+    font-weight: bold;
+}
+
+table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+table tr:hover {
+    background-color: #ddd;
+}
+
+/* Action buttons styling */
+table td button {
+    background-color: #D25858;
+    color: white;
+    border: none;
+    padding: 6px 12px; /* Reduced padding */
+    cursor: pointer;
+    border-radius: 4px;
+    margin-right: 8px; /* Added spacing between buttons */
+    transition: background-color 0.3s ease;
+    display: inline-block;
+}
+
+table td button:hover {
+    background-color: #B84141;
+}
+
+/* Action buttons container (to align them horizontally) */
+table td .action-buttons {
+    display: flex;
+    gap: 8px; /* Space between buttons */
+    justify-content: flex-start; /* Align buttons to the left */
+}
+
+/* Add User Button */
+#addUserBtn {
+    background-color: #FFD357;
+    color: #1E1E1E;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    display: block;
+    margin-bottom: 20px;
+    margin-left: 75px; /* Aligns button to the right */
+}
+
+
+#addUserBtn:hover {
+    background-color: #FFC107;
+}
+
+
+/* Modal Styling */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+    padding-top: 60px;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 40%; /* Center the modal */
+    border-radius: 8px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover, .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#userForm label {
+    display: block;
+    margin-top: 12px;
+    color: #1E1E1E;
+}
+
+#userForm input, #userForm select, #userForm button {
+    width: 100%;
+    padding: 8px;
+    margin-top: 8px;
+    margin-bottom: 12px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+#userForm button {
+    background-color: #FFD357;
+    color: #1E1E1E;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#userForm button:hover {
+    background-color: #FFC107;
+}
+
